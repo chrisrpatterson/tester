@@ -1,0 +1,32 @@
+id: e3b05ef7-755c-4266-ba3a-637c3abdfe94
+version: v2
+name: Test
+apptype: api
+language: python
+containerName: test
+toolchain:
+  id: 58f7bea88ef1e700214218e4
+  name: Qubeship-Python-Toolchain
+opinion:
+  id: 58f7bea8e936e0000e151363
+  name: Qubeship default opinion
+endpoint:
+  id: 58f7bea8238503000b74d7fc
+  name: Qubeship Sandbox Cluster
+  type: target
+variables:
+  - name: APP_VERSION
+    value: v0.1
+build:
+  compile:
+    publish:
+     - dist/
+bake:
+  skip: false
+test:
+  skip: true
+deploy_to_qa:
+  skip: true
+deploy_to_prod:
+  skip: false
+
